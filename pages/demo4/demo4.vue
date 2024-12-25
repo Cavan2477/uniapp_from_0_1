@@ -75,7 +75,7 @@
 				a: 0,
 				b: 0,
 				firstName: 'Foo',
-				lastName: 'Bar',
+				lastName: 'Bar'
 			};
 		},
 		methods: {
@@ -91,7 +91,7 @@
 				console.log(e);
 			},
 			onTestEventClick() {
-				console.log("onTestEventClick原生方法输出")
+				console.log("onTestEventClick原生方法输出...")
 			}
 		},
 		computed: {
