@@ -75,7 +75,7 @@
 				a: 0,
 				b: 0,
 				firstName: 'Foo',
-				lastName: 'Bar'
+				lastName: 'Bar',
 			};
 		},
 		methods: {
