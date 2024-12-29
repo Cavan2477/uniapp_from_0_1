@@ -1,5 +1,24 @@
 <template>
 	<view class="out">
+		<view>
+			--------跳转页面测试--------
+			<view>
+				<button size="mini" @click="onClickGoList">go [列表]</button>
+			</view>
+			<view>
+				<button size="mini" @click="onClickGoAbout">go [我们]</button>
+			</view>
+			<view>
+				<button size="mini" @click="onClickGoDemo">go [demo]</button>
+			</view>
+			<view>
+				<button size="mini" @click="onClickGoDemo2">go [demo2]</button>
+			</view>
+			<view>
+				<button size="mini" @click="onClickGoDemo4">go [demo4]</button>
+			</view>
+		</view>
+		
 		<pubTitle :title="title" :subTitle="subTitle" :time="time" :list="list" :user="user"></pubTitle>
 
 		<navigator url="/pages/list/list" open-type="redirect">新闻列表</navigator>
@@ -72,6 +91,52 @@
 					gender: "男"
 				}
 			}
+		},
+		methods: {
+			onClickGoList() {
+				uni.reLaunch({
+					url: "/pages/list/list",
+					success: res => {
+						console.log(res);
+					}
+				})
+			},
+			onClickGoAbout() {
+				uni.reLaunch({
+					url: "/pages/about/about",
+					success: res => {
+						console.log(res);
+					}
+				})
+			},
+			onClickGoDemo() {
+				uni.navigateTo({
+					url: "/pages/demo/demo",
+					animationType:'slide-in-bottom',
+					animationDuration: 1000,
+					success: res => {
+						console.log(res);
+					}
+				})
+			},
+			onClickGoDemo2() {
+				uni.navigateTo({
+					url: "/pages/demo2/demo2",
+					animationType:'zoom-fade-out',
+					animationDuration: 1000,
+					success: res => {
+						console.log(res);
+					}
+				})
+			},
+			onClickGoDemo4() {
+				uni.switchTab({
+					url: "/pages/demo4/demo4",
+					success: res => {
+						console.log(res);
+					}
+				})
+			},
 		}
 	}
 </script>

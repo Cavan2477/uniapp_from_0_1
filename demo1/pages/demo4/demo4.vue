@@ -1,8 +1,14 @@
 <template>
 	<view class="out">
 		<testitem></testitem>
-		-------------------------------
+		--------------输入框子组件内容修改-------------
 		<testEvent @inputChange="onInputChange" @click.native="onTestEventClick"></testEvent>
+		------------父子组件传值-----------
+		<view>
+			<button @click="onClickBtnStatePop">开启{{ statePop }}</button>
+			<testPop :state.sync="statePop"></testPop>
+		</view>
+		
 		-------------------------------
 		<form @submit="onSubmit">
 			<view class="row">
@@ -75,7 +81,8 @@
 				a: 0,
 				b: 0,
 				firstName: 'Foo',
-				lastName: 'Bar'
+				lastName: 'Bar',
+				statePop: false
 			};
 		},
 		methods: {
@@ -92,6 +99,9 @@
 			},
 			onTestEventClick() {
 				console.log("onTestEventClick原生方法输出...")
+			},
+			onClickBtnStatePop() {
+				this.statePop = true;
 			}
 		},
 		computed: {
