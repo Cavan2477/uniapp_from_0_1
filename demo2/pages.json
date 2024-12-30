@@ -19,6 +19,13 @@
 			{
 				"navigationBarTitleText" : "用户"
 			}
+		},
+		{
+			"path" : "pages/detail/detail",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 	],
 	"globalStyle": {
